@@ -8,7 +8,7 @@ public class Base64GUI
     {
         JFrame frame = new JFrame("Base64");
         frame.setSize(400, 200);
-        frame.setDefaultCloseOption(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
         frame.add(panel); // Add panel to frame
@@ -28,9 +28,9 @@ public class Base64GUI
             public void actionPerformed(ActionEvent e)
             {
                 String originalString = inputField.getText();
-                Base64encodeButtonr encodeButtonr = new Base64encodeButtonr();
+                Base64Encoder encoder = new Base64Encoder();
 
-                String encodeButtondString = encodeButtonr.encodeButtonString(encodeButtondString);
+                String encodeButtondString = encoder.encodeString(originalString);
 
                 outputField.setText(encodeButtondString);
             }
@@ -42,9 +42,9 @@ public class Base64GUI
             public void actionPerformed(ActionEvent e)
             {
                 String originalString = inputField.getText();
-                Base64encodeButtonr decodeButtonr = new Base64decodeButtonr();
+                Base64Decoder decoder = new Base64Decoder();
 
-                String decodeButtondString = decodeButtonr.decodeButtonString(decodeButtondString);
+                String decodeButtondString = decoder.decodeString(originalString);
 
                 outputField.setText(decodeButtondString);
             }

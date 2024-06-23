@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Base64_Main 
+public class Base64Main 
 {
     public static void main(String[] args) 
     {
